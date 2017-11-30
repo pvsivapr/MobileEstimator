@@ -22,6 +22,20 @@ namespace MobileEstimatorApp.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
+			#region For Screen Height & Width
+			var pixels = Resources.DisplayMetrics.WidthPixels;
+			var scale = Resources.DisplayMetrics.Density;
+
+			var dps = (double)((pixels - 0.5f) / scale);
+
+			BaseContentPage.screenWidth = (int)dps;
+
+			pixels = Resources.DisplayMetrics.HeightPixels;
+			dps = (double)((pixels - 0.5f) / scale);
+
+			BaseContentPage.screenHeight = (int)dps;
+			#endregion
+
 			LoadApplication(new App());
 		}
 	}

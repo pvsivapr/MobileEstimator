@@ -93,6 +93,7 @@
     <Compile Include="Views\EstimationPage.xaml.cs">
       <DependentUpon>EstimationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BaseContentPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
