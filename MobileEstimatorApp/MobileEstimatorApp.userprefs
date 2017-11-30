@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{8BF2A51F-53F7-44B0-B216-C659191BAF01}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MobileEstimatorApp/Views/EstimationPage.xaml.cs">
+    <Files>
+      <File FileName="MobileEstimatorApp/Views/UserSignIn.xaml" Line="6" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/UserSignIn.xaml.cs" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VINScan.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VINScan.xaml.cs" Line="16" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleServiceChoice.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleServiceChoice.xaml.cs" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/SelectAPart.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/SelectAPart.xaml.cs" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageOne.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageOne.xaml.cs" Line="8" Column="23" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageTwo.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageTwo.xaml.cs" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageThree.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageThree.xaml.cs" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageFour.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/VehicleInfoPageFour.xaml.cs" Line="16" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/EstimationPage.xaml" Line="1" Column="1" />
+      <File FileName="MobileEstimatorApp/Views/EstimationPage.xaml.cs" Line="16" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MobileEstimatorApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.881C62F2-35B8-45A6-AAE4-852B77D4768E" />
+</Properties>
