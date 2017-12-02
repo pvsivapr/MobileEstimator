@@ -10,6 +10,7 @@ namespace MobileEstimatorApp
 		public VehicleInfoPageOne()
 		{
 			InitializeComponent();
+
 		}
 	}
 }
