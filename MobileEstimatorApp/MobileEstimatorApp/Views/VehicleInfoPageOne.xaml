@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -7,21 +7,28 @@
 	<ContentPage.Content>
 		<AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-			<StackLayout BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<StackLayout BackgroundColor="Maroon" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 				
-				<Label HorizontalOptions="Start" VerticalOptions="FillAndExpand">
-				</Label>
-				<Label Text="Mobile Estimator" TextColor="Teal" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-				</Label>
-				<Label HorizontalOptions="End" VerticalOptions="FillAndExpand">
-				</Label>
+                <Label Text="Back" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="BackTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Mobile Estimator" TextColor="Teal" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                </Label>
+                <Label Text="Next" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="End" VerticalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="NextTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
 				
 			</StackLayout>
 
-			<StackLayout BackgroundColor="Teal" AbsoluteLayout.LayoutBounds="1,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<StackLayout BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-				<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-					<Grid ColumnSpacing="30" RowSpacing="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+				<ScrollView  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<StackLayout Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<Grid ColumnSpacing="30" RowSpacing="30" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 						<!--<Grid.RowDefinitions>
 							<RowDefinition Height = "1*" />
 							<RowDefinition Height = "0.1*" />
@@ -47,28 +54,28 @@
 						</Grid.ColumnDefinitions>
 
 						<StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-							<Image Source="profileOne.png" HeightRequest="50" WidthRequest="50">
+							<Image x:Name="imgAvatar" Source="profileOne.png" HeightRequest="50" WidthRequest="50">
 							</Image>
 						</StackLayout>
 						<BoxView Color="Transparent" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 						</BoxView>
 
 						<StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-							<Image Source="settingsOne.png" HeightRequest="50" WidthRequest="50">
+							<Image x:Name="imgSettings" Source="settingsOne.png" HeightRequest="50" WidthRequest="50">
 							</Image>
 						</StackLayout>
 						<BoxView Color="Transparent" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 						</BoxView>
 
 						<StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-							<Image Source="imageOne.png" HeightRequest="50" WidthRequest="50">
+							<Image x:Name="imgPicture" Source="imageOne.png" HeightRequest="50" WidthRequest="50">
 							</Image>
 						</StackLayout>
 						<BoxView Color="Transparent" Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 						</BoxView>
 
 						<StackLayout Grid.Row="0" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-							<Image Source="descriptionsOne.png" HeightRequest="50" WidthRequest="50">
+							<Image x:Name="imgDescription" Source="descriptionsOne.png" HeightRequest="50" WidthRequest="50">
 							</Image>
 						</StackLayout>
 						<BoxView Color="Transparent" Grid.Row="0" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -76,6 +83,7 @@
 						
 					</Grid>
 				</StackLayout>
+				</ScrollView>
 				
 			</StackLayout>
 
