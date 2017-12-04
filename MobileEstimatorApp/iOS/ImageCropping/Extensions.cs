@@ -2,93 +2,93 @@ using System;
 using Foundation;
 using UIKit;
 
-namespace OnePosInventory.iOS
+namespace MobileEstimatorApp.iOS
 {
-	public static class Extensions
-	{
+    public static class Extensions
+    {
 
-		public static byte[] UIImageToBytes(this UIImage image)
-		{
+        public static byte[] UIImageToBytes(this UIImage image)
+        {
 
-			if (image == null)
-			{
-				return null;
-			}
-			NSData data = null;
+            if (image == null)
+            {
+                return null;
+            }
+            NSData data = null;
 
-			try
-			{
-				data = image.AsPNG();
-				return data.ToArray();
-			}
-			catch (Exception)
-			{
-				return null;
-			}
-			finally
-			{
-				image.Dispose();
-				data?.Dispose();
-			}
-		}
+            try
+            {
+                data = image.AsPNG();
+                return data.ToArray();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                image.Dispose();
+                data?.Dispose();
+            }
+        }
 
-		public static UIImage BytesToUIImage(this byte[] data)
-		{
-			if (data == null)
-			{
-				return null;
-			}
-			UIImage image;
-			try
-			{
+        public static UIImage BytesToUIImage(this byte[] data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+            UIImage image;
+            try
+            {
 
-				image = new UIImage(NSData.FromArray(data));
-			}
-			catch (Exception)
-			{
-				return null;
-			}
-			return image;
-		}
+                image = new UIImage(NSData.FromArray(data));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            return image;
+        }
 
-		public static void PresentUsingRootViewController(this UIViewController controller)
-		{
-			if (controller == null)
-				throw new ArgumentNullException(nameof(controller));
+        public static void PresentUsingRootViewController(this UIViewController controller)
+        {
+            if (controller == null)
+                throw new ArgumentNullException(nameof(controller));
 
-			var visibleViewController = GetVisibleViewController(null);
-			visibleViewController?.PresentViewController(controller, true, () => { });
-		}
+            var visibleViewController = GetVisibleViewController(null);
+            visibleViewController?.PresentViewController(controller, true, () => { });
+        }
 
-		private static UIViewController GetVisibleViewController(UIViewController controller)
-		{
-			if (controller == null)
-			{
-				controller = UIApplication.SharedApplication.KeyWindow.RootViewController;
-			}
+        private static UIViewController GetVisibleViewController(UIViewController controller)
+        {
+            if (controller == null)
+            {
+                controller = UIApplication.SharedApplication.KeyWindow.RootViewController;
+            }
 
-			if (controller?.NavigationController?.VisibleViewController != null)
-			{
-				return controller.NavigationController.VisibleViewController;
-			}
+            if (controller?.NavigationController?.VisibleViewController != null)
+            {
+                return controller.NavigationController.VisibleViewController;
+            }
 
-			if (controller != null && (controller.IsViewLoaded && controller.View?.Window != null))
-			{
-				return controller;
-			}
+            if (controller != null && (controller.IsViewLoaded && controller.View?.Window != null))
+            {
+                return controller;
+            }
 
-			if (controller != null)
-			{
-				foreach (var childViewController in controller.ChildViewControllers)
-				{
-					var foundVisibleViewController = GetVisibleViewController(childViewController);
-					if (foundVisibleViewController == null)
-						continue;
+            if (controller != null)
+            {
+                foreach (var childViewController in controller.ChildViewControllers)
+                {
+                    var foundVisibleViewController = GetVisibleViewController(childViewController);
+                    if (foundVisibleViewController == null)
+                        continue;
 
-					return foundVisibleViewController;
-				}
-			}
-			return controller;
-		}
-	}
+                    return foundVisibleViewController;
+                }
+            }
+            return controller;
+        }
+    }
 }
