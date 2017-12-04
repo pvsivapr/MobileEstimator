@@ -11,5 +11,38 @@ namespace MobileEstimatorApp
 		{
 			InitializeComponent();
 		}
+
+		void EstimateButtonClicked(object sender, EventArgs e)
+		{
+			try
+			{
+			}
+			catch (Exception ex)
+			{
+				var msg = ex.Message;
+			}
+		}
+
+		void RepairButtonClicked(object sender, EventArgs e)
+		{
+			try
+			{
+			}
+			catch (Exception ex)
+			{
+				var msg = ex.Message;
+			}
+		}
+
+		void HistoryButtonClicked(object sender, EventArgs e)
+		{
+			try
+			{
+			}
+			catch (Exception ex)
+			{
+				var msg = ex.Message;
+			}
+		}
 	}
 }
