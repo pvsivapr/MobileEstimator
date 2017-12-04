@@ -82,6 +82,13 @@
                         </BoxView>
                         
                     </Grid>
+						<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							<Image x:Name="selectImage" Source="profileOne.png" HeightRequest="200" WidthRequest="200">
+								<Image.GestureRecognizers>
+									<TapGestureRecognizer NumberOfTapsRequired="1" Tapped="SelectImageTapped" />
+								</Image.GestureRecognizers>
+                            </Image>
+						</StackLayout>
                 </StackLayout>
                 </ScrollView>
 				
